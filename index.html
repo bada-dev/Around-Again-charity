@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What I’ve built, and what I can build for you</title>
+<meta name="description" content="A student developer offering to build a charity’s website and system for free, using what they already built in VuliStudy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fbf8f3;
+    --ink: #33302b;
+    --soft: #6f665b;
+    --rule: #e6ddd0;
+    --warm: #a0703f;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paper); color: var(--ink); font: 19px/1.7 "Source Serif 4", Georgia, serif; }
+  img { max-width: 100%; height: auto; display: block; }
+  main { max-width: 760px; margin: 0 auto; padding: 0 22px; }
+  h1, h2, h3 { font-weight: 600; line-height: 1.2; }
+  p + p { margin-top: 1em; }
+
+  .opening { padding: 96px 0 56px; }
+  .opening h1 { font-size: clamp(34px, 5.5vw, 48px); letter-spacing: -0.01em; }
+  .opening .lead { margin-top: 32px; }
+  .opening em { color: var(--warm); }
+  .film { display: block; width: 100%; height: auto; margin-top: 40px; border-radius: 10px; background: #efe7db; }
+
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 0; }
+
+  .part { display: grid; grid-template-columns: 200px 1fr; gap: 40px; padding: 48px 0; align-items: start; }
+  .part h2 { font-size: 25px; }
+  .part p { margin-top: 10px; }
+  .part .for { color: var(--soft); }
+  .part .for b { color: var(--ink); font-weight: 600; }
+  .phone { background: #262321; border-radius: 26px; padding: 7px; }
+  .phone img { border-radius: 20px; }
+  .browser { border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: #fff; }
+  .browser::before { content: ""; display: block; height: 18px; background: #eee8df; }
+
+  .section-title { font-size: 28px; padding: 56px 0 8px; }
+  .section-intro { color: var(--soft); padding-bottom: 8px; }
+
+  .closing { padding: 56px 0 96px; }
+  .closing h2 { font-size: clamp(30px, 4.6vw, 40px); margin-bottom: 24px; }
+  .note { margin-top: 48px; font-size: 15px; color: var(--soft); }
+
+  @media (max-width: 640px) {
+    body { font-size: 18px; }
+    .opening { padding: 56px 0 40px; }
+    .part { grid-template-columns: 1fr; gap: 20px; padding: 36px 0; }
+    .part .shot { max-width: 210px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <section class="opening">
+    <h1>What I’ve built, and what I can build for you</h1>
+    <div class="lead">
+      <p>Hello, and thank you for taking a moment to read this.</p>
+      <p>I’m a student, and I built an app called VuliStudy entirely on my own. It helps people study: they keep a little buddy happy by focusing, earn coins, climb a leaderboard and study together in group chats. Real people use it, and I look after every part of it myself, from the design and the code to the server and database it runs on.</p>
+      <p>I’m not an average student programmer. I didn’t follow a tutorial and stop. I designed the whole thing, wrote the server, secured the logins, kept people’s data private and made it work as a phone app and a browser extension.</p>
+      <p>Now I want to use that for something that matters. <em>I want real experience building something useful</em>, and I can’t think of anything more useful than helping the people who help others. So I’d love to build your website and the system behind it, for free.</p>
+      <p>Here’s a short look at the app, followed by the parts of VuliStudy that already work today and what each one could do for you.</p>
+    </div>
+    <video class="film" src="video/vulistudy-charity.mp4" poster="video/poster.jpg" controls playsinline preload="metadata" width="1920" height="1080"></video>
+  </section>
+
+  <hr>
+
+  <section class="part">
+    <div class="shot phone"><img src="images/admin.png" alt="The admin access prompt in VuliStudy" width="824" height="1784"></div>
+    <div>
+      <h2>Accounts and secure login</h2>
+      <p>In VuliStudy, everyone signs in with a password, and there’s a separate admin area that only I can open.</p>
+      <p class="for"><b>For you:</b> a staff-only area, so only your team can see and change the records that matter.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="part">
+    <div class="shot phone"><img src="images/leaderboard.png" alt="The VuliStudy leaderboard" width="824" height="1784"></div>
+    <div>
+      <h2>Coins, totals and leaderboards</h2>
+      <p>The server counts every minute studied and every coin earned, then ranks people all-time, weekly and among friends.</p>
+      <p class="for"><b>For you:</b> tracking bookings, stock or volunteer hours, with up-to-date numbers whenever you need them.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="part">
+    <div class="shot phone"><img src="images/chat.png" alt="A VuliStudy group chat" width="824" height="1784"></div>
+    <div>
+      <h2>Chats</h2>
+      <p>People make group chats, invite friends and run a shared timer so the whole group studies together.</p>
+      <p class="for"><b>For you:</b> messages between staff and volunteers, kept in one place instead of scattered across personal phones.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="part">
+    <div class="shot phone"><img src="images/premium.png" alt="The VuliStudy+ members area" width="824" height="1784"></div>
+    <div>
+      <h2>Different levels of access</h2>
+      <p>Free members and VuliStudy+ members see different things, and the server checks which is which every time.</p>
+      <p class="for"><b>For you:</b> different permissions for staff, volunteers and admins, so each person sees exactly what they need.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="part">
+    <div class="shot phone"><img src="images/stats.png" alt="The VuliStudy statistics page" width="824" height="1784"></div>
+    <div>
+      <h2>A live database, always on</h2>
+      <p>VuliStudy runs on Render with a Supabase database, day and night, and I keep it running myself.</p>
+      <p class="for"><b>For you:</b> your system running for free on accounts in your charity’s name, so it belongs to you from day one.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <h2 class="section-title">What it would cost you</h2>
+  <p class="section-intro">Nothing. I’m not asking to be paid. Everything would sit on Render and Supabase accounts in your charity’s name, on their free plans, so it costs nothing to run and you keep full control. It does not mean the websites will be extremely slow. They might face small delays, and nothing else. We’d start with whichever job takes up most of your week, and build that first. Nothing about the people you help would ever be shown in public.</p>
+
+  <section class="closing">
+    <h2>The same skills, built for your charity, for free.</h2>
+    <p>Thank you for reading. Everything on this page is already running in VuliStudy, and I’d be glad to show you any of it.</p>
+    <p class="note">The screenshots use a test account and made-up names. No real VuliStudy users appear on this page.</p>
+  </section>
+
+</main>
+</body>
+</html>
