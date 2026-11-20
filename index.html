@@ -17,26 +17,75 @@
     --warm: #a0703f;
   }
   * { box-sizing: border-box; margin: 0; }
-  body { background: var(--paper); color: var(--ink); font: 19px/1.7 "Source Serif 4", Georgia, serif; }
+  body {
+    background:
+      radial-gradient(ellipse at 82% 4%, rgba(160, 112, 63, 0.065), transparent 29rem),
+      var(--paper);
+    color: var(--ink);
+    font: 19px/1.7 "Source Serif 4", Georgia, serif;
+  }
   img { max-width: 100%; height: auto; display: block; }
   main { max-width: 760px; margin: 0 auto; padding: 0 22px; }
   h1, h2, h3 { font-weight: 600; line-height: 1.2; }
   p + p { margin-top: 1em; }
 
   .opening { padding: 96px 0 56px; }
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+    color: var(--warm);
+    font: 600 11px/1.4 Arial, sans-serif;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--warm);
+    box-shadow: 0 0 0 4px rgba(160, 112, 63, 0.12);
+  }
   .opening h1 { font-size: clamp(34px, 5.5vw, 48px); letter-spacing: -0.01em; }
   .opening .lead { margin-top: 32px; }
   .opening em { color: var(--warm); }
-  .film { display: block; width: 100%; height: auto; margin-top: 40px; border-radius: 10px; background: #efe7db; }
+  .film {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    border: 1px solid rgba(160, 112, 63, 0.16);
+    border-radius: 10px;
+    background: #efe7db;
+    box-shadow: 0 10px 30px rgba(71, 53, 34, 0.07);
+  }
 
   hr { border: 0; border-top: 1px solid var(--rule); margin: 0; }
 
   .part { display: grid; grid-template-columns: 200px 1fr; gap: 40px; padding: 48px 0; align-items: start; }
   .part h2 { font-size: 25px; }
+  .part h2::after, .section-title::after {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 2px;
+    margin-top: 12px;
+    border-radius: 2px;
+    background: var(--warm);
+    opacity: 0.7;
+  }
   .part p { margin-top: 10px; }
   .part .for { color: var(--soft); }
   .part .for b { color: var(--ink); font-weight: 600; }
-  .phone { background: #262321; border-radius: 26px; padding: 7px; }
+  .phone {
+    background: #262321;
+    border: 1px solid rgba(160, 112, 63, 0.2);
+    border-radius: 26px;
+    padding: 7px;
+    box-shadow: 0 9px 24px rgba(43, 35, 27, 0.11);
+  }
   .phone img { border-radius: 20px; }
   .browser { border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: #fff; }
   .browser::before { content: ""; display: block; height: 18px; background: #eee8df; }
@@ -44,9 +93,18 @@
   .section-title { font-size: 28px; padding: 56px 0 8px; }
   .section-intro { color: var(--soft); padding-bottom: 8px; }
 
-  .closing { padding: 56px 0 96px; }
+  .closing { padding: 56px 0 72px; }
   .closing h2 { font-size: clamp(30px, 4.6vw, 40px); margin-bottom: 24px; }
-  .note { margin-top: 48px; font-size: 15px; color: var(--soft); }
+  .note { margin-top: 36px; font-size: 15px; color: var(--soft); }
+  .site-note {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 17px 22px 24px;
+    border-top: 1px solid var(--rule);
+    color: #8a8177;
+    font: 11px/1.6 Arial, sans-serif;
+    text-align: center;
+  }
 
   @media (max-width: 640px) {
     body { font-size: 18px; }
@@ -60,6 +118,7 @@
 <main>
 
   <section class="opening">
+    <div class="eyebrow">A little about what I can build</div>
     <h1>What I’ve built, and what I can build for you</h1>
     <div class="lead">
       <p>Hello, and thank you for taking a moment to read this.</p>
@@ -134,9 +193,11 @@
   <section class="closing">
     <h2>The same skills, built for your charity, for free.</h2>
     <p>Thank you for reading. Everything on this page is already running in VuliStudy, and I’d be glad to show you any of it.</p>
+    <p>VuliStudy also demonstrates how I can design and draw original graphics from scratch, creating visuals that suit a product rather than relying on generic templates. I can bring that same creative approach to your website.</p>
     <p class="note">The screenshots use a test account and made-up names. No real VuliStudy users appear on this page.</p>
   </section>
 
 </main>
+<footer class="site-note">This is a simple example website, made specifically to show you what I can do through the images and videos on this page.</footer>
 </body>
 </html>
